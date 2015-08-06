@@ -1,12 +1,13 @@
 
-  <div id="branding" class="clearfix">
-    <?php print $breadcrumb; ?>
+<div id="branding" class="clearfix">
+    <?php /* print $breadcrumb; ?>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
       <h1 class="page-title"><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
-    <?php print render($primary_local_tasks); ?>
+    <?php print render($primary_local_tasks); */ ?> 
+    <div><img src="sites/all/themes/PlayAround/images/EDoAHeader.png" /></div>
   </div>
 
   <div id="page">

@@ -1,20 +1,16 @@
+;This is a comment
 name = Play Around
-description = A simple one-column, tableless, fluid width administration theme.
+description = A theme for helping me learn how all this works.
 package = Core
-version = VERSION
+version = 1.0
 core = 7.x
 stylesheets[screen][] = reset.css
 stylesheets[screen][] = style.css
 settings[shortcut_module_link] = 1
+regions[header] = Header
 regions[content] = Content
 regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 regions[sidebar_first] = First sidebar
 regions_hidden[] = sidebar_first
-
-; Information added by Drupal.org packaging script on 2015-06-17
-version = "7.38"
-project = "drupal"
-datestamp = "1434567286"
-
