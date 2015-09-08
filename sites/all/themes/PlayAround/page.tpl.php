@@ -7,7 +7,7 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <?php print render($primary_local_tasks); */ ?> 
-    <div><img src="sites/all/themes/PlayAround/images/EDoAHeader.png" /></div>
+  	 <div class="header"><img src="http://www.albanyepiscopaldiocese.org/drupal/sites/all/themes/PlayAround/images/EDoAHeader.png" /></div>
   </div>
 
   <div id="page">
