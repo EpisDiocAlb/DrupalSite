@@ -7,7 +7,7 @@
  * @param $form_state
  *   A keyed array containing the current state of the form.
  */
-function EDoA_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
+function edoa_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;
@@ -16,10 +16,10 @@ function EDoA_form_system_theme_settings_alter(&$form, &$form_state, $form_id = 
   // Create the form using Forms API: http://api.drupal.org/api/7
 
   /* -- Delete this line if you want to use this setting
-  $form['EDoA_example'] = array(
+  $form['edoa_example'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('EDoA sample setting'),
-    '#default_value' => theme_get_setting('EDoA_example'),
+    '#title'         => t('edoa sample setting'),
+    '#default_value' => theme_get_setting('edoa_example'),
     '#description'   => t("This option doesn't do anything; it's just an example."),
   );
   // */
