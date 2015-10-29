@@ -19,7 +19,8 @@
  * HTML5 display definitions
  */
 
-/* Correct `block` display not defined in IE 8/9. */
+/* Correct `block` display not defined in IE 8/9 at all, and for details or summary 
+ in IE 10/11 and FF and main in IE11 */
 article,
 aside,
 details,
@@ -28,17 +29,21 @@ figure,
 footer,
 header,
 main,
+menu,
 nav,
 section,
 summary {
   display: block;
 }
 
-/* Correct `inline-block` display not defined in IE 8/9. */
+/* Correct `inline-block` display not defined in IE 8/9. 
+Normalize vertical alignment of progress in Chrome, FF and Opera. */
 audio,
 canvas,
+progress,
 video {
   display: inline-block;
+  vertical-align: baseline;
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *display: inline;
     *zoom: 1;
@@ -54,8 +59,10 @@ audio:not([controls]) {
   height: 0;
 }
 
-/* Address styling not present in IE 8/9. */
-[hidden] {
+/* Address hidden styling not present in IE 8/9/10. And hide template
+in IE 8/9/11, Safari, and FF < 22 */
+[hidden],
+template {
   display: none;
 }
 
@@ -96,20 +103,27 @@ audio:not([controls]) {
 }
 */
 
+@font-face {
+	font-family: 'Raleway';
+	src: url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+	font-weight: normal;
+  	font-style: normal;
+}
+
 /**
- * 1. Set default font family to sans-serif.
+ * 1. Set default font family to base font family defined in _init.scss.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
  *    `em` units.
+ * 4. Establish a vertical rhythm unit using $base-line-height.
  */
 html {
   font-family: $base-font-family; /* 1 */
   font-size: 100% * ($base-font-size / 16px); /* 3 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  // Establish a vertical rhythm unit using $base-line-height.
-  @include adjust-leading-to(1);
+  @include adjust-leading-to(1);/* 4 */
 }
 
 @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
@@ -233,7 +247,7 @@ dfn {
 hr {
   @include box-sizing(content-box);
   height: 0;
-  border: 1px solid #666;
+  border: 1px solid #667;
   padding-bottom: -1px;
   margin: rhythm(1) 0;
 }

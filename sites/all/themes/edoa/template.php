@@ -34,16 +34,15 @@ function edoa_preprocess_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
+/* -- Delete this line if you want to use this function
 function edoa_preprocess_html(&$variables, $hook) {
-	drupal_add_css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', array('type' => 'external'));
-	drupal_add_js('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('type' => 'external'));
   //$variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
 }
-
+// */
 /**
  * Override or insert variables into the page templates.
  *

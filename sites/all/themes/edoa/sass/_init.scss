@@ -11,13 +11,16 @@
 // - Last we define our custom mixins for this theme.
 //
 
-
 // =============================================================================
 // Variables
 // =============================================================================
 
 //
 // Legacy IE support
+
+$browser-minimum-versions: (
+  "ie":      "6"
+);
 //
 // These variables are used by many mixins to add additional CSS to support
 // specific versions of IE or specific vendor prefixes.
@@ -28,16 +31,16 @@
 // - (Preferred) Install the box-sizing polyfill and set the variable below to
 //   the absolute path URL to the boxsizing.htc file.
 //   @see https://github.com/Schepp/box-sizing-polyfill
-//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+$box-sizing-polyfill-path: "/sites/all/themes/edoa/css/boxsizing.htc";
 // - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
 //   (use px for both or use % for both) and set the box-sizing variable to content-box.
 //
 // Zen does not require special handling for IE8 or later. But Compass uses that
 // variable for a couple edge cases. We include it for completeness sake. See
 // the documentation at http://compass-style.org/reference/compass/support/
-$legacy-support-for-ie6: false;
-$legacy-support-for-ie7: false;
-$legacy-support-for-ie8: true;
+/*  $legacy-support-for-ie6: true;
+ $legacy-support-for-ie7: true;
+ $legacy-support-for-ie8: true; */
 
 
 //
@@ -70,25 +73,29 @@ $h6-font-size: 0.67 * $base-font-size;
 // monospace) hints at what type of font to use if the web browser doesn't
 // find any of the fonts in the list.
 
+
 // First, let's create some font stacks.
-$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+//JS - not using serif fonts.
+//$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+//$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+//$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
 
 $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
+$raleway:         Raleway, Verdana, Tahoma, sans-serif;
+$forum:			  Forum, Helvetica, Arial, sans-serif;
+
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $raleway; // The font family set on the html element.
+$font-body:        $raleway;
 $font-monospace:   $courier;
-
 
 //
 // Colors, etc.
@@ -100,9 +107,9 @@ $indent-amount: 30px;
 // The height of the navigation container.
 $nav-height: 3em;
 
-// Tab styling.
-$tabs-container-bg: #fff;
-$tabs-border: #bbb;
+// Tab styling. Masthead background color is #8D1F22
+$tabs-container-bg: #F4E9E9; // very light red in same color family as masthead
+$tabs-border: #380C0E; // very dark red in same color family as masthead
 
 
 // =============================================================================

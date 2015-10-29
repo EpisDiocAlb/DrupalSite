@@ -6,11 +6,16 @@
  * of these @include files will be combined into a single file.
  */
 
-/* Import Sass mixins, variables, Compass modules, etc. */
+/* From Savas Labs: Import Sass mixins, variables, Compass modules, Bourbon and Neat, etc. */
 @import "init";
+/* @import "base/variables";
 
-/* HTML element (SMACSS base) rules */
-@import "normalize";
+ From Savas Labs: HTML element (SMACSS base) rules - don't forget to add commenting back here.
+//@import "base/normalize";
+//@import "base/base"; */
+
+/* from Zen: HTML element (SMACSS base) rules 
+@import "normalize";  
 
 /* Layout rules */
 @import "layouts/responsive";
