@@ -104,7 +104,7 @@
 .header__site-link {
   &:link,
   &:visited {
-    color: #000;
+	  color: #551315; /*very dark red in same color family as masthead*/
     text-decoration: none;
   }
 

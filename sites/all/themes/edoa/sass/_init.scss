@@ -38,9 +38,9 @@ $box-sizing-polyfill-path: "/sites/all/themes/edoa/css/boxsizing.htc";
 // Zen does not require special handling for IE8 or later. But Compass uses that
 // variable for a couple edge cases. We include it for completeness sake. See
 // the documentation at http://compass-style.org/reference/compass/support/
-/*  $legacy-support-for-ie6: true;
- $legacy-support-for-ie7: true;
- $legacy-support-for-ie8: true; */
+  $legacy-support-for-ie6: false;
+ $legacy-support-for-ie7: false;
+ $legacy-support-for-ie8: true; 
 
 
 //
@@ -80,22 +80,23 @@ $h6-font-size: 0.67 * $base-font-size;
 //$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
 //$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
 
-$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
-$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
-$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+//$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+//$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+//$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+//$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
 $raleway:         Raleway, Verdana, Tahoma, sans-serif;
 $forum:			  Forum, Helvetica, Arial, sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+//$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $raleway; // The font family set on the html element.
 $font-body:        $raleway;
-$font-monospace:   $courier;
+//$font-monospace:   $courier;
+$font-monospace:	monospace;
 
 //
 // Colors, etc.

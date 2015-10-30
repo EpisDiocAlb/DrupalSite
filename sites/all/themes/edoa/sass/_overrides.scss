@@ -1,0 +1,18 @@
+/** 
+ * This file is for overriding (mainly bootstrap) styles to 
+ * establish the EDoA look and feel.
+ * 
+ * 
+ */
+
+body {
+	color: #551315; //very dark red in same color family as masthead
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #551315; //very dark red in same color family as masthead
+}
+
+a, a:active, a:hover {
+	color: #71191B; // medium red in same color family as masthead
+}

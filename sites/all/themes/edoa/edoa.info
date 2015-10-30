@@ -49,9 +49,14 @@ stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 
-; Then we add our own stylesheet.
-;stylesheets[all][] = css/styles.css
-stylesheets[all][] = sass/styles.scss
+;Then we add bootstrap
+stylesheets[all][] = bootstrap/css/bootstrap.css
+
+; Then we add our own stylesheet, so it overrides the stuff in bootstrap we don't want.
+stylesheets[all][] = css/styles.css
+;stylesheets[all][] = sass/styles.scss
+
+
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -67,7 +72,7 @@ stylesheets[all][] = sass/styles.scss
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = bootstrap/js/bootstrap.js
 
 
 
