@@ -7,3 +7,7 @@ sites/*/private
 
 #Ignore things that are for developer convenience
 /drupalupdates/
+
+#Ignore things that don't need to be in git
+/.DS_Store
+/tmp/
