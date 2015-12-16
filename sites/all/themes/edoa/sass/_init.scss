@@ -25,7 +25,7 @@ $browser-minimum-versions: (
 // These variables are used by many mixins to add additional CSS to support
 // specific versions of IE or specific vendor prefixes.
 //
-// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// IE6-7 doesn't support box-sizing: border-box. We can fix this in 1 of 3 ways:
 // - Drop support for IE 6/7. :-) Set $legacy-support-for-ie6
 //   and $legacy-support-for-ie7 to false.
 // - (Preferred) Install the box-sizing polyfill and set the variable below to
