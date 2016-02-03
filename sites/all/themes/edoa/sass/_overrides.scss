@@ -6,13 +6,108 @@
  */
 
 body {
-	color: #551315; //very dark red in same color family as masthead
+	color:$dark-red;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
-	color: #551315; //very dark red in same color family as masthead
+	color: $dark-red;
 }
 
-a, a:active, a:hover {
-	color: #71191B; // medium red in same color family as masthead
+
+a, a:active {
+	color: $med-red;
 }
+
+
+a:hover {
+	color: $dark-red;
+}
+
+
+.hdr-background {
+	background-color: $masthead-color;
+}
+
+.nav-item { /* Style the individual links in the menu */
+	color: $buff;
+	padding-right: 20px;
+	font-size: 110%;
+}
+
+.menu a.active {  /* Override active menu item color  */
+	color: $buff;
+}
+
+.menu a.hover { /* Override hover menu item properties  */
+	color: $buff;
+	text-decoration: underline;
+}
+
+.hamburger-menu {
+    display: none;
+    background: $masthead-color;
+    width: 40%;
+    text-align: center;
+    &:hover {
+      background: $resp-hover;
+    } /* hover */
+    a {
+      width: 100%;
+      display: inline-block;
+      color: $buff;
+    } /* a */
+} /* hamburger-menu */
+
+.reg-menu {
+	.menu-resp {
+		padding-right: 2%;
+	}
+}
+.reg-menu {
+	.menu-horiz { /* make the menu horizontal and right-justified */
+		display: inline;
+		float: right;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+  .reg-menu {
+    .menu-resp {
+      max-height: 0;
+      overflow: hidden;
+      float: none;
+      text-align: center;
+      width: 100%;
+      @include transition(max-height 0.5s);
+      &.menuOpen {
+        max-height: 1000px;
+        @include transition(max-height 0.5s);
+      } /* menuOpen */
+    ul {
+      li {
+        display: block;
+        width: 100%;
+        background: $masthead-color;
+        border-top:1px solid $dark-red;
+        &:hover {
+          background: $resp-hover;
+        } /* hover */
+        a {
+          color: $buff;
+          text-shadow: $med-red 0px 1px 2px;
+          padding: 10px 0;
+          width: 100%;
+          } /* a */
+        } /* li */
+      } /* ul */
+    } /* menu-resp */
+  } /* reg-menu */
+  .hamburger-menu {
+      display: inline-block;
+      float: right;
+      height:50%;
+      width: 15%;
+      background:linear-gradient(to bottom, $buff 0%, $buff 20%, transparent 20%, transparent 40%, $buff 40%, $buff 60%, transparent 60%, transparent 80%, $buff 80%, $buff 100%);
+  } /* hamburger-menu */
+} /* screen max width 767px */

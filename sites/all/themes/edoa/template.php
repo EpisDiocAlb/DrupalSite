@@ -51,9 +51,9 @@ function edoa_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
+/* -- Delete this line if you want to use this function 
 function edoa_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  //$variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
 
@@ -129,3 +129,36 @@ function edoa_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+function edoa_menu_tree($variables) {
+	return '<div>&nbsp;</div><div class="hamburger-menu"><a href="#expandMenu"></a></div><div class="reg-menu"><ul class="menu menu-resp">'
+				. $variables['tree'] . '</ul></div>';
+}
+
+/**
+ * 
+ * Make menu a horizontal list of links
+ * 
+ *  @param $variables
+ *   An array of variables to pass to the theme template.
+ * 
+ */
+function edoa_menu_link(array $variables) {
+	$element = $variables['element'];
+	$sub_menu = '';
+	//This adds classes to the list item element
+	$element['#attributes']['class'][] = 'menu-horiz';
+
+	//This styles the actual menu links
+	$element['#localized_options']['attributes']['class'][]='nav-item';
+	if ($element['#below']) {
+		$sub_menu = drupal_render($element['#below']);
+	}
+	$output = l($element['#title'], $element['#href'], $element['#localized_options']);
+	
+	return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+
+
+ 

@@ -18,34 +18,24 @@
 //
 // Legacy IE support
 
-$browser-minimum-versions: (
-  "ie":      "6"
-);
+$browser-minimum-versions: (ie: "6");
+
 //
 // These variables are used by many mixins to add additional CSS to support
 // specific versions of IE or specific vendor prefixes.
 
-$browser-minimum-versions: (ie: "6");
+
 
 // IE6-7 doesn't support box-sizing: border-box. We can fix this in 1 of 3 ways:
 // - Drop support for IE 6/7. :-) Set $legacy-support-for-ie6
-//   and $legacy-support-for-ie7 to false.
+//   and $legacy-support-for-ie7 to false. (Actually, use $browser-minimum-versions: (ie: "8"); )
 // - (Preferred) Install the box-sizing polyfill and set the variable below to
 //   the absolute path URL to the boxsizing.htc file.
 //   @see https://github.com/Schepp/box-sizing-polyfill
 
-$box-sizing-polyfill-path: "/sites/all/themes/edoa/css/boxsizing.htc";
+$box-sizing-behavior: "*behavior: url(/sites/all/themes/edoa/css/boxsizing.htc)";
 
-// - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
-//   (use px for both or use % for both) and set the box-sizing variable to content-box.
 //
-// Zen does not require special handling for IE8 or later. But Compass uses that
-// variable for a couple edge cases. We include it for completeness sake. See
-// the documentation at http://compass-style.org/reference/compass/support/
-// $legacy-support-for-ie6: false;
-// $legacy-support-for-ie7: false;
- $legacy-support-for-ie8: true; 
-
 //
 // Font faces, stacks and sizes.
 //
@@ -104,6 +94,11 @@ $font-monospace:	monospace;
 //
 // Colors, etc.
 //
+$masthead-color: #A72528;
+$dark-red: #551315; //very dark red in same color family as masthead
+$med-red: #71191B; // medium red in same color family as masthead
+$resp-hover: #d12e32; //lighter red for hovering in an expanded hamburger icon situation
+$buff: #F1E5C7; //Masthead shield/text color
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
@@ -111,7 +106,7 @@ $indent-amount: 30px;
 // The height of the navigation container.
 $nav-height: 3em;
 
-// Tab styling. Masthead background color is #8D1F22
+// Tab styling. 
 $tabs-container-bg: #F4E9E9; // very light red in same color family as masthead
 $tabs-border: #380C0E; // very dark red in same color family as masthead
 
@@ -132,9 +127,6 @@ $tabs-border: #380C0E; // very dark red in same color family as masthead
 @import "compass/typography/vertical_rhythm";
 // Add the Zen Grids responsive layout mixins.
 @import "zen";
-@import "zen-grids";
-@import "zen-grids/functions";
 
 // Now we add our custom helper mixins.
- @import "zen-grids/background";
 @import "mixins";

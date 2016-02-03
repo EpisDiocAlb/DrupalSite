@@ -73,6 +73,7 @@ stylesheets[all][] = css/styles.css
 ; Optionally add some JavaScripts to your theme.
 
 scripts[] = bootstrap/js/bootstrap.js
+;scripts[] = js/script.js
 
 
 
